@@ -1,14 +1,18 @@
 print("Bhaskara Calculator")
-a = float(input('Entre com o valor de a: '))
-b = float(input('Entre com o valor de b: '))
-c = float(input('Entre com o valor de c: '))
+print("ax^2 + bx + c = 0")
+a = float(input("Enter 'a' value: "))
+b = float(input("Enter 'b' value: "))
+c = float(input("Enter 'c' value: "))
 
-delta = (b ** 2) - 4 * a * c
+delta = (b**2) - 4 * a * c
 
 if a == 0:
-    print("O valor de a, deve ser diferente de 0")
+    print("'a' value must be different from 0")
 elif delta < 0:
-    print("Sem raízes reais")
+    print("Complex number")
+elif delta == 0:
+    x = (-b) / (2 * a)
+    print(f"x = {x}")
 else:
     x1 = (-b + delta ** (1 / 2)) / (2 * a)
     x2 = (-b - delta ** (1 / 2)) / (2 * a)
